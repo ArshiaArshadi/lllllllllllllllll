@@ -12,7 +12,7 @@
     console.log(ovenTemperature); // خروجی: 220
     
     
-    
+    //0
     
     
     
