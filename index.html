@@ -6,12 +6,15 @@
   <title>Drinko — Coffee Shop</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Archivo:wght@500;600;700;800&family=Great+Vibes&family=Lora:wght@500;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Archivo:wght@500;600;700;800&family=Great+Vibes&family=Lora:wght@500;600;700&family=Playfair+Display:ital,wght@0,600;1,500;1,600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
 
-  <!-- ============ HERO ============ -->
+  <!-- 3D scene canvas (fixed behind the page) -->
+  <canvas id="scene3d" aria-hidden="true"></canvas>
+
+  <!-- ============ HERO (pinned 3D scene) ============ -->
   <header class="hero" id="home">
     <nav class="nav">
       <a class="logo" href="#home">Drinko</a>
@@ -36,8 +39,12 @@
       </div>
     </nav>
     <div class="hero-body">
-      <h1 class="hero-title"><span>ORDER</span><span>COFFEE</span></h1>
-      <p class="hero-welcome script">Welcome</p>
+      <div class="hero-copy">
+        <p class="hero-welcome script">Welcome</p>
+        <h1 class="hero-title">Order<br>Coffee</h1>
+        <p class="hero-para">A refreshing coffee drink made with espresso, cold milk, and ice — smooth, light, and perfectly balanced.</p>
+        <a class="hero-cta" href="#menu">my basket</a>
+      </div>
     </div>
   </header>
 
@@ -102,6 +109,17 @@
     </div>
   </section>
 
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
+  <script type="importmap">
+    {
+      "imports": {
+        "three": "https://unpkg.com/three@0.160.0/build/three.module.js",
+        "three/addons/": "https://unpkg.com/three@0.160.0/examples/jsm/"
+      }
+    }
+  </script>
   <script src="app.js"></script>
+  <script type="module" src="scene3d.js"></script>
 </body>
 </html>
