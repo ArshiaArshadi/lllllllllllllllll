@@ -1,0 +1,107 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Drinko — Coffee Shop</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Archivo:wght@500;600;700;800&family=Great+Vibes&family=Lora:wght@500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <!-- ============ HERO ============ -->
+  <header class="hero" id="home">
+    <nav class="nav">
+      <a class="logo" href="#home">Drinko</a>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="#home">Home</a></li>
+        <li><a href="#menu">Menu</a></li>
+        <li><a href="#new">Delivery</a></li>
+      </ul>
+      <div class="nav-icons">
+        <button class="icon-btn" aria-label="Favorites">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 21s-7.5-4.7-10-9.3C.6 8.6 2.4 5 6 5c2.2 0 3.7 1.2 4.5 2.6h3C14.3 6.2 15.8 5 18 5c3.6 0 5.4 3.6 4 6.7C19.5 16.3 12 21 12 21z" transform="scale(0.92) translate(1,1)"/></svg>
+        </button>
+        <button class="icon-btn" aria-label="Search">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="11" cy="11" r="7"/><path d="M21 21l-4.3-4.3"/></svg>
+        </button>
+        <button class="icon-btn" aria-label="Basket">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M5 8h14l-1.2 11a2 2 0 0 1-2 1.8H8.2a2 2 0 0 1-2-1.8L5 8z"/><path d="M9 10V6a3 3 0 0 1 6 0v4"/></svg>
+        </button>
+        <button class="hamburger" id="hamburger" aria-label="Menu" aria-expanded="false">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </nav>
+    <div class="hero-body">
+      <h1 class="hero-title"><span>ORDER</span><span>COFFEE</span></h1>
+      <p class="hero-welcome script">Welcome</p>
+    </div>
+  </header>
+
+  <!-- ============ MENU ============ -->
+  <section class="menu" id="menu">
+    <div class="menu-head">
+      <div class="menu-title">
+        <h2>Menu</h2>
+        <span class="script">drinks</span>
+      </div>
+      <button class="btn basket" type="button">my basket</button>
+    </div>
+
+    <div class="pills" id="pills">
+      <button class="pill active" type="button">Iced coffee</button>
+      <button class="pill" type="button">Milk-Based Coffee</button>
+      <button class="pill" type="button">Classic Coffee</button>
+      <button class="pill" type="button">Specialty Coffee</button>
+      <button class="pill" type="button">Sweet Coffee</button>
+    </div>
+
+    <div class="carousel">
+      <button class="arrow left" id="prevBtn" aria-label="Previous">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M15 4l-8 8 8 8"/></svg>
+      </button>
+      <div class="grid" id="menuGrid"></div>
+      <button class="arrow right" id="nextBtn" aria-label="Next">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M9 4l8 8-8 8"/></svg>
+      </button>
+    </div>
+
+    <div class="more-wrap">
+      <button class="btn more" type="button">More</button>
+    </div>
+  </section>
+
+  <!-- ============ NEW DRINK ============ -->
+  <section class="nd" id="new">
+    <div class="nd-left">
+      <h2 class="nd-title"><span class="nd-new">New</span><span class="script">edition</span></h2>
+      <div class="nd-big">drink</div>
+      <h3>Iced Latte</h3>
+      <p class="nd-desc">A refreshing coffee drink made with espresso, cold milk, and ice. It has a smooth, light flavor, balancing the bitterness of coffee with the creaminess of milk. Perfect for hot days or when you want a cool, enjoyable coffee without being too strong.</p>
+      <div class="nd-stats">
+        <div class="stat">
+          <span class="stat-value">3 syrups</span>
+          <span class="stat-cap">vanilla, caramel,<br>hazelnut</span>
+        </div>
+        <div class="stat">
+          <span class="stat-value">With</span>
+          <span class="stat-cap">espresso +<br>cold milk + ice</span>
+        </div>
+        <div class="stat">
+          <span class="stat-value">20%</span>
+          <span class="stat-cap">Sale</span>
+        </div>
+      </div>
+    </div>
+    <div class="nd-right">
+      <div class="nd-price">6.50$<s>7.80$</s></div>
+      <img src="https://images.unsplash.com/photo-1549652127-2e5e59e86a7a?auto=format&fit=crop&w=1000&q=80" alt="Iced latte">
+    </div>
+  </section>
+
+  <script src="app.js"></script>
+</body>
+</html>
